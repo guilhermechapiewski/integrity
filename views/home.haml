@@ -19,3 +19,9 @@
             = project.human_readable_status
   %p#new
     %a{ :href => root_path("/new") } Add a new project
+
+- unless @screen_refresh_interval == 0
+  %script{:type => "text/javascript"}
+    //<![CDATA[
+    &== setTimeout('location.reload()', #{@screen_refresh_interval} * 1000)
+    //]]>

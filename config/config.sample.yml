@@ -39,3 +39,9 @@
 # If this is true, then whenever we authenticate the admin user, will hash
 # it using SHA1. If not, we'll assume the provided password is in plain text.
 :hash_admin_password: true
+
+# Use this option to make the monitoring screens refresh every 'x' seconds. 
+# The only screens that will refresh are the projects home (/) and the 
+# projects page (/project/).
+# The default refresh interval is '0' (disabled).
+:screen_refresh_interval: 0

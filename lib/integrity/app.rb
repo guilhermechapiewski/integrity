@@ -33,7 +33,6 @@ module Integrity
 
     get "/?" do
       @projects = Project.only_public_unless(authorized?)
-      @screen_refresh_interval = Integrity.config[:screen_refresh_interval]
       show :home, :title => "projects"
     end
 
@@ -72,7 +71,6 @@ module Integrity
 
     get "/:project" do
       login_required unless current_project.public?
-      @screen_refresh_interval = Integrity.config[:screen_refresh_interval]
       show :project, :title => ["projects", current_project.name]
     end
 

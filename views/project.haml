@@ -28,9 +28,3 @@
               &== Build #{commit.short_identifier}
             %span.attribution<
               == by #{commit.author.name}, #{pretty_date commit.committed_at}
-
-- unless @screen_refresh_interval == 0
-  %script{:type => "text/javascript"}
-    //<![CDATA[
-    &== setTimeout('location.reload()', #{@screen_refresh_interval} * 1000)
-    //]]>

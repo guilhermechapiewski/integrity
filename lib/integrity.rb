@@ -41,14 +41,13 @@ module Integrity
   end
 
   def self.default_configuration
-    @defaults ||= { :database_uri             => "sqlite3::memory:",
-                    :export_directory         => "/tmp/exports",
-                    :log                      => STDOUT,
-                    :base_uri                 => "http://localhost:8910",
-                    :use_basic_auth           => false,
-                    :build_all_commits        => true,
-                    :log_debug_info           => false,
-                    :screen_refresh_interval  => 0 }
+    @defaults ||= { :database_uri      => "sqlite3::memory:",
+                    :export_directory  => "/tmp/exports",
+                    :log               => STDOUT,
+                    :base_uri          => "http://localhost:8910",
+                    :use_basic_auth    => false,
+                    :build_all_commits => true,
+                    :log_debug_info    => false }
   end
 
   def self.config
